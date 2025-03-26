@@ -181,7 +181,7 @@ jobs:
         run: |
           cd ./wrt/
 
-          make -j$(nproc) || make -j1 V=s
+          make -j$(nproc) || make -j$(nproc) V=s
 
       - name: Machine Information
         run: |
@@ -227,9 +227,6 @@ jobs:
           files: ./wrt/upload/*.*
           body: |
             内核版本：${{env.WRT_KVER}}
-
-            WIFI名称：${{env.WRT_SSID}}
-            WIFI密码：${{env.WRT_WORD}}
 
             源码：${{env.WRT_REPO}}
             分支：${{env.WRT_BRANCH}}
