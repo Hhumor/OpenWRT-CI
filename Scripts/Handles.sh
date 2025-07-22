@@ -75,3 +75,21 @@ if [ -f "$RUST_FILE" ]; then
 
 	cd $PKG_PATH && echo "rust has been fixed!"
 fi
+
+#修复DiskMan编译失败
+DM_FILE="./luci-app-diskman/applications/luci-app-diskman/Makefile"
+if [ -f "$DM_FILE" ]; then
+	echo " "
+
+	sed -i 's/fs-ntfs/fs-ntfs3/g' $DM_FILE
+
+	cd $PKG_PATH && echo "diskman has been fixed!"
+fi
+
+#修复libffi编译失败
+LF_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/libffi/Makefile")
+if [ -f "$LF_FILE" ]; then
+	sed -i '/\/autoreconf/d' $LF_FILE
+
+	cd $PKG_PATH && echo "libffi has been fixed!"
+fi
