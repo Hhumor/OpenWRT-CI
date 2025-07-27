@@ -5,7 +5,7 @@ CONFIG_PACKAGE_luci-app-netspeedtest=y
 CONFIG_PACKAGE_luci-app-tailscale=y
 CONFIG_PACKAGE_luci-app-ddns-go=n
 CONFIG_PACKAGE_luci-nginx=y
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+CONFIG_PACKAGE_luci-app-vlmcsd=n
 CONFIG_PACKAGE_luci-app-natmap=y
 #删除插件
 CONFIG_PACKAGE_luci-app-wol=n
