@@ -68,3 +68,8 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 	#其他调整
 	echo "CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y" >> ./.config
 fi
+
+# 替换nju镜像源）
+sed -i 's|https://downloads.immortalwrt.org|https://mirror.nju.edu.cn/immortalwrt|g' \
+    package/base-files/files/etc/opkg/distfeeds.conf
+
