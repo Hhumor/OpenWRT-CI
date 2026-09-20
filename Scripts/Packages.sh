@@ -82,7 +82,7 @@ UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "natmapt" "muink/openwrt-natmapt" "master"
 UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master"
 UPDATE_PACKAGE "luci-app-natmapt" "muink/luci-app-natmapt" "master"
-UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
+UPDATE_PACKAGE "luci-app-tailscale-community" "Tokisaki-Galaxy/luci-app-tailscale-community" "main"
 
 UPDATE_PACKAGE "airpi3000m" "LianXia233/luci-app-airpi3000m-fancontrol" "main"
 UPDATE_PACKAGE "h5000m" "LianXia233/luci-app-h5000m-netmode" "main"
