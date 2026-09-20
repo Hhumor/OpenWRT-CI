@@ -49,6 +49,14 @@ if [ -d "$PACKAGE_PATH/luci-app-natmapt" ]; then
 	fi
 fi
 
+#修复TailScale配置文件冲突
+TS_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/tailscale/Makefile")
+if [ -f "$TS_FILE" ]; then
+	echo " "
+	sed -i '/\/files/d' $TS_FILE
+	cd $PKG_PATH && echo "tailscale has been fixed!"
+fi
+
 #修复QModem依赖循环
 if [ -d "$PACKAGE_PATH/QModem" ]; then
 	echo " "
